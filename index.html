@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101724" />
+  <link rel="icon" href="data:," />
+  <title>SKYBOUND — A tiny mountain climb</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Skybound home"><span class="brand-mark">✦</span> SKYBOUND</a>
+      <div class="chapter">A TINY MOUNTAIN CLIMB <span>•</span> CHAPTER 01</div>
+      <button id="sound-toggle" class="sound-button" aria-label="Toggle sound" title="Toggle sound">♫ <span>ON</span></button>
+    </header>
+    <section class="game-frame" aria-label="Skybound platform game">
+      <canvas id="game" width="960" height="540" aria-label="Platform game. Use arrow keys or WASD to move, space to jump, and X or Shift to dash."></canvas>
+      <div class="hud">
+        <div class="level-chip"><span class="level-dot"></span><span id="level-name">01 — THE FOOTHILLS</span></div>
+        <div class="hud-right"><span class="feather" aria-hidden="true">◆</span><span id="dash-label">DASH READY</span><span class="hud-divider"></span><span id="deaths">0</span><span class="death-label">FALLS</span></div>
+      </div>
+      <div id="toast" class="toast" aria-live="polite"></div>
+      <div id="start-card" class="modal-card">
+        <div class="eyebrow"><span>✦</span> A LITTLE ADVENTURE</div>
+        <h1>THE SKY<br><em>IS YOURS.</em></h1>
+        <p>Five quiet screens. One very tall mountain.<br>Find your footing, then trust the wind.</p>
+        <button id="start-button" class="primary-button">BEGIN THE CLIMB <span>↗</span></button>
+        <div class="key-hint">MOVE <kbd>←</kbd><kbd>→</kbd> &nbsp; JUMP <kbd>SPACE</kbd> &nbsp; DASH <kbd>X</kbd></div>
+      </div>
+      <div id="finish-card" class="modal-card hidden">
+        <div class="eyebrow"><span>✦</span> SUMMIT REACHED</div>
+        <h1>YOU MADE<br><em>IT UP HERE.</em></h1>
+        <p id="finish-copy">The whole world, holding its breath.</p>
+        <button id="replay-button" class="primary-button">CLIMB AGAIN <span>↗</span></button>
+      </div>
+      <div class="room-label" id="room-label">01 / 05</div>
+      <div class="controls-hint"><span>WASD / ARROWS</span> MOVE <i>·</i> <span>SPACE</span> JUMP <i>·</i> <span>X / SHIFT</span> DASH</div>
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="touch-dpad"><button data-control="left" aria-label="Move left">‹</button><button data-control="right" aria-label="Move right">›</button></div>
+        <div class="touch-actions"><button data-control="jump" aria-label="Jump">↑</button><button data-control="dash" aria-label="Dash">✦</button></div>
+      </div>
+    </section>
+    <footer class="footer"><span>TAKE A BREATH. TAKE THE NEXT STEP.</span><span class="footer-right">A GAME ABOUT KEEPING GOING <b>✦</b></span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
